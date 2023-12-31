@@ -1,78 +1,117 @@
 /*this changes the color of the page entirely from what is on the 
 background to the writting in the box as well as the boxes*/
 :root {
-    --outer: rgb(253, 212, 212);
-    --content: rgb(199, 12, 127);
-    --gin: rgb(61, 2, 37);
-    --heliotrope: rgb(194, 18, 71);
-  }
-
-*{
-box-sizing: border-box;
-Padding: 0;
-Margin: 0;
-  }
-
-  
-  html {
-    font-size: 50%;
-  }
-  
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-      Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    font-size: 1.75rem;
-    line-height: 1.5;
-    color: var(--gin);
-    background-color: var(--outer);
-  }
-  
-header {
-    background: var(--outer);
-    margin: 0px;
-    padding: 35px;
-    border: 5px double var(--gin);  
-  }  
-
-h1{
-    margin-bottom: 17px;
-    color: var(--heliotrope);
-    font-weight: 600;
-    line-height: 1;
-    font-size: 35px;
-  }
-header nav ul li {
-    list-style-type: none;
-    display: inline-block;
-    margin-left: 40px;
-    float: right;
-    font-size: 20px;
-   }  
-
-   .benefits {
-    margin-right: 20px;
-    margin-bottom: 32px;
-    padding: 12px;
-    clear: both;
-    float: left;
-    width: 18%;
-    height: 150%;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-    color: var(--content)
+    --outer: rgba(102, 244, 215, 0.538);
+    --content: rgb(237, 166, 140);
+    --border: rgba(249, 240, 240, 0.968);
 }
 
 main {
-    width: 90%;
-    margin: 15px auto;
-  }
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2%;
+    width: 100%;
+    margin: 0px auto;
+    flex: 1 0 200px;
+}
 
-.justify-center{
+* {
+    box-sizing: border-box;
+    Padding: 0;
+    Margin: 0;
+}
+
+
+html {
+    font-size: 50%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+        Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: var(--content);
+    background-color: var(--outer);
+}
+
+.main-header {
+    background: var(--content);
+    margin: 0px;
+    padding: 40px;
+    border: 8px solid;
+    border-color: var(--border);
+    color: var(--border);
+}
+
+aside {
+    width: 15%;
+    padding-left: 0.6rem;
+    margin-left: 0.6rem;
+    display: flex;
+    display: wrap;
+    float: left;
+    flex: 1 0 200px
+}
+
+nav ul li a {
+    display: inline-block;
+    margin-left: 30px;
+    float: right;
+    font-size: 20px;
+    color: var(--border);
+}
+
+
+.about-me {
+    margin-bottom: 30px;
+    padding: 30px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--border);
+    color: var(--content);
+    font-weight: 600;
+    display: flex;
+    flex: 1 0 200px;
+    display: wrap;
+}
+
+.content {
+    justify-content: space-between;
+    display: flex;
+    display: wrap;
+    font-weight: 600px;
+}
+
+.main-header .work2 {
+    justify-content: center;
+    display: flex;
+    font-weight: 600;
+    padding-block: 10px;
+    margin-bottom: 30px;
+    height: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--content);
+    color: var(--border);
+}
+
+.float-left {
+    float: left;
+    margin-right: 30px;
+}
+
+.float-right {
+    float: right;
+    margin-right: 30px;
+}
+
+.justify-center {
     justify-content: center;
 }
 
 
-  
-  footer {
-    margin: 0;
+footer {
+    margin: 100px;
+    padding: 100px;
     text-align: center;
-  }
+}
