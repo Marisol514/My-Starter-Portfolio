@@ -1,18 +1,18 @@
 /*this changes the color of the page entirely from what is on the 
 background to the writting in the box as well as the boxes*/
 :root {
-    --outer: rgba(102, 244, 215, 0.538);
+    --outer: rgb(102, 244, 216);
     --content: rgb(237, 166, 140);
-    --border: rgba(249, 240, 240, 0.968);
+    --border: rgb(249, 240, 240);
 }
 
 main {
+    flex: 1;
     display: flex;
+    align-items: stretch;
     flex-wrap: wrap;
     margin: 2%;
-    width: 100%;
     margin: 0px auto;
-    flex: 1 0 200px;
 }
 
 * {
@@ -27,6 +27,9 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
         Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     font-size: 1.75rem;
@@ -35,69 +38,63 @@ body {
     background-color: var(--outer);
 }
 
-.main-header {
+header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 15px;
     background: var(--content);
-    margin: 0px;
-    padding: 40px;
-    border: 8px solid;
-    border-color: var(--border);
     color: var(--border);
-}
-
-aside {
-    width: 15%;
-    padding-left: 0.6rem;
-    margin-left: 0.6rem;
-    display: flex;
-    display: wrap;
-    float: left;
-    flex: 1 0 200px
+    text-wrap: wrap;
+    overflow: hidden;
 }
 
 nav ul li a {
     display: inline-block;
+    display: flex;
+    justify-content: display-end;
+    text-wrap: wrap;
     margin-left: 30px;
     float: right;
     font-size: 20px;
     color: var(--border);
+    list-style: none;
 }
 
-
-.about-me {
-    margin-bottom: 30px;
-    padding: 30px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: var(--border);
-    color: var(--content);
-    font-weight: 600;
-    display: flex;
-    flex: 1 0 200px;
-    display: wrap;
+img {
+    width: 90px;
+    height: auto;
+    border-radius: 5px;
 }
 
-.content {
-    justify-content: space-between;
-    display: flex;
-    display: wrap;
-    font-weight: 600px;
+.line {
+    border-bottom: 13px dashed var(--border);
+    width: 100%
 }
 
-.main-header .work2 {
-    justify-content: center;
+.about-me-section {
     display: flex;
-    font-weight: 600;
-    padding-block: 10px;
-    margin-bottom: 30px;
-    height: 50px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: var(--content);
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+    padding-bottom: 5px;
+    background: var(--content);
     color: var(--border);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: auto;
+
+}
+
+.image {
+    flex: 0 0 auto;
+    max-width: 50%;
 }
 
 .float-left {
     float: left;
-    margin-right: 30px;
 }
 
 .float-right {
@@ -105,13 +102,97 @@ nav ul li a {
     margin-right: 30px;
 }
 
-.justify-center {
-    justify-content: center;
+
+.card-column {
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+}
+
+.code-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2rem;
+    color: var(--border);
+
+    /* outline is like border, but on the outside of the box instead of inside */
+    outline: 5px dashed var(--border);
+    outline-offset: -5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.code-card .card-header {
+    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--outer);
+    color: var(--border);
+    border: 2px solid var(--outer);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
 }
 
 
+/* set an outer and inner drop shadow on the card to create a glowing effect on hover */
+.code-card:hover,
+.code-card:hover .card-header {
+    box-shadow: inset 0px 0px 8px var(--border), 0 0 15px var(--border);
+}
+/* each card's code block grows to the height of the largest code block on the page, making each card even in height */
+.code-card .code-block {
+    flex-grow: 1;
+}
+
+.code-card pre {
+    /* set styles to make it so code wraps in <pre> instead of overflowing */
+    white-space: pre-wrap;
+    overflow: auto;
+    padding: 1.2rem 1rem;
+    color: var(--gin);
+    border-radius: 8px;
+    /* use linear-gradient() function to create a fading background  */
+    background-image: linear-gradient(rgba(234, 212, 11, 0.897) 0%,
+            rgba(84, 6, 85, 0.753) 100%);
+    display: flex;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.full-width-image {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-item {
+display: flex;
+display: inline-block;
+height: 100px;
+height: 200%;
+box-sizing: border-box;
+ }
+
+@media screen and (max-width:768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image {
+        max-width: 100%;
+    }
+
+}
 footer {
-    margin: 100px;
-    padding: 100px;
+    margin: 10px;
+    padding: 10px;
     text-align: center;
 }
