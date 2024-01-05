@@ -68,7 +68,7 @@ img {
 }
 
 .line {
-    border-bottom: 13px dashed var(--border);
+    border-bottom: 13px solid var(--outer);
     width: 100%
 }
 
@@ -95,6 +95,7 @@ img {
 
 .float-left {
     float: left;
+    justify-content:left
 }
 
 .float-right {
@@ -156,8 +157,9 @@ img {
     color: var(--gin);
     border-radius: 8px;
     /* use linear-gradient() function to create a fading background  */
-    background-image: linear-gradient(rgba(234, 212, 11, 0.897) 0%,
-            rgba(84, 6, 85, 0.753) 100%);
+    background-image: linear-gradient(
+    rgba(121, 77, 141, 0.897) 0%,
+    rgba(201, 192, 16, 0.753) 100%);
     display: flex;
 }
 
