@@ -107,9 +107,10 @@ padding: 20px; /* Add space between image and text */
 }
 
 .work-section {/*Creates the background clolors work the work section*/
+    flex: 1;
     display: flex; /* Makes the elemensts flex containers*/
-    align-items: center; /*aligns items at the center of the container*/
     flex-direction: column;/*Arranges the items on a column layout*/
+    align-items: center; /*aligns items at the center of the container*/
     margin: auto;/*Centers the flex container and creates equal margins*/
     padding: 10px; /*padding is 10px all around*/
     padding-bottom: 5px;/*Adds 5px addtional pixels at the bottom*/
@@ -123,11 +124,29 @@ padding: 20px; /* Add space between image and text */
     height: auto; /*Allows the element to grow in height automatically*/
 }
 
+
 .work-section2 {/*Creates the background clolors work the work section*/
-    display: flex;
+    flex: 1;
+    display: flex; /* Makes the elemensts flex containers*/
+    align-items: center; /*aligns items at the center of the container*/
+    margin: auto;/*Centers the flex container and creates equal margins*/
+    padding: 10px; /*padding is 10px all around*/
+    padding-bottom: 5px;/*Adds 5px addtional pixels at the bottom*/
+    background: var(--foreground);/*Sets the background color using variable*/
+    color: var(--content); /*sets the text color using a variable*/
+    width:100%;
+    max-width: 100%;/*Sets the width to span the entirely element and does 
+    not exceed the containger*/
+    box-sizing: border-box;/*ensures that pasidng and borders are included 
+    in the width and height of the element precenting them from affecting the overall height*/
+    height: auto; /*Allows the element to grow in height automatically*/
+    display: inline-block;
+    flex-direction: column;/*Arranges the items on a column layout*/
+    flex-wrap: wrap;
     display: center; /*aligns items at the center of the container*/
-    justify-content: center;
     align-items: center;
+    overflow:hidden;
+    padding: 20px;
 }
 
 .container {
@@ -206,6 +225,7 @@ padding: 20px; /* Add space between image and text */
 /*centers the card items below the larger image and 
 displays in-line block and the border box maintains a consitent layout*/
 .work-item {
+    flex-wrap: wrap;
 width: 30%;/* sets the with of the element to 30%*/
 display: inline-block; /*Allows them net to each other horizonally*/
 box-sizing: border-box;/*adjusts box model to included pading and border*/

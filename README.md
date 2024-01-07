@@ -41,3 +41,46 @@ THEN I am presented with a responsive layout that adapts to my viewport
 ## Review Links
 Deplyes Application Link: https://marisol514.github.io/My-Starter-Portfolio/
 URL GitHub Repository: https://github.com/Marisol514/My-Starter-Portfolio
+
+## Acknowledgments:
+
+Worked with Danniel Merino mostly to bouce ideas.
+
+## Resources: 
+
+Accesibility - Contrast Checquer: https://accessibleweb.com/color-contrast-checker/
+emoji source: https://emojipedia.org/
+
+Mini-Project references: https://git.bootcampcontent.com/University-of-California---Irvine/UCI-VIRT-FSF-PT-12-2023-U-LOLC/-/tree/main/02-Advanced-CSS/01-Activities/28-Stu_Mini-Project?ref_type=heads
+
+Links References: https://git.bootcampcontent.com/University-of-California---Irvine/UCI-VIRT-FSF-PT-12-2023-U-LOLC/-/tree/main/01-HTML-Git-CSS/01-Activities/06-Stu_HTML?ref_type=heads
+
+Reset Reference: https://dev.to/ziratsu/css-reset-58h9
+http://web.simmons.edu/~grovesd/comm244/notes/week4/css-reset
+
+Roor: https://developer.mozilla.org/en-US/docs/Web/CSS/:root
+
+Flex: https://developer.mozilla.org/en-US/docs/Web/CSS/flex
+
+Flex Direction: https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
+
+CSS Variables: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+
+Justify Content: https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+
+Outline: https://developer.mozilla.org/en-US/docs/Web/CSS/outline
+
+Outline Offset: https://developer.mozilla.org/en-US/docs/Web/CSS/outline-offset
+
+:hover: https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+
+White-Space: https://developer.mozilla.org/en-US/docs/Web/CSS/white-space
+
+Vertical Align: https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align
+
+@media: https://developer.mozilla.org/en-US/docs/Web/CSS/@media
+ 
+
+
+
+
