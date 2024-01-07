@@ -1,193 +1,253 @@
 /*this changes the color of the page entirely from what is on the 
 background to the writting in the box as well as the boxes*/
 :root {
-    --background-color: rgb(127, 92, 94);/*background color for the page*/
-    --foreground: rgb(80, 2, 47); /* main color in the page*/
-    --content: rgb(233, 206, 181); /*changes font color*/
-    --box-font: rgb(178, 113, 1); /*Changes color in the h2 for the contact me and work areas*/
+    --background-color: rgb(127, 92, 94);
+    /*background color for the page*/
+    --foreground: rgb(80, 2, 47);
+    /* main color in the page*/
+    --content: rgb(233, 206, 181);
+    /*changes font color*/
+    --box-font: rgb(178, 113, 1);
+    /*Changes color in the h2 for the contact me and work areas*/
 }
 
 main {
-    flex: 1;/* shorthad for flex grow, srink, and flex basis making expand and fill the empty available space*/
-    display: flex; /*enables layout properties to the "childre"*/
-    flex-wrap: wrap; /* instructs children elements to wrap when they become to wide*/
-    margin: 2%; /*sets margin to 2% on all sides*/
-    margin: 0px auto; /*overrides previous margin declaration setting top and bottom margin and centering the element*/
+    flex: 1;
+    /* shorthad for flex grow, srink, and flex basis making expand and fill the empty available space*/
+    display: flex;
+    /*enables layout properties to the "childre"*/
+    flex-wrap: wrap;
+    /* instructs children elements to wrap when they become to wide*/
+    margin: 2%;
+    /*sets margin to 2% on all sides*/
+    margin: 0px auto;
+    /*overrides previous margin declaration setting top and bottom margin and centering the element*/
 }
 
 html {
-    font-size: 60%;/*normal size is 16px, this sets all other font sizes in the 
+    font-size: 60%;
+    /*normal size is 16px, this sets all other font sizes in the 
     document basd on this percentage*/
 }
 
 body {
     display: flex;
-    flex-direction: column;/*Sets the bodyt o flex container*/
-    min-height: 100vh; /*set height to 100% of the viewpoint, and the vh ensures that the 
+    flex-direction: column;
+    /*Sets the bodyt o flex container*/
+    min-height: 100vh;
+    /*set height to 100% of the viewpoint, and the vh ensures that the 
     body at least spans the entire height*/
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-        Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; /*spacifies the font size */
-    font-size: 17.5px; /*sets font size*/
-    line-height: 1.5; /*Spacing between lines of text will be 1.5 times the font size.*/
-    color: var(--foreground);/*uses the color in the root*/
-    background-color: var(--background-color);/*uses the color in the root*/
+        Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    /*spacifies the font size */
+    font-size: 17.5px;
+    /*sets font size*/
+    line-height: 1.5;
+    /*Spacing between lines of text will be 1.5 times the font size.*/
+    color: var(--foreground);
+    /*uses the color in the root*/
+    background-color: var(--background-color);
+    /*uses the color in the root*/
 }
 
 header {
     display: flexbox;
-    width: 100%; /* element to 100% of its containing parent, making it span the entire width available*/
-    margin: 0 auto;/*centers the deader element horizontally within the containing paernt and the 
+    width: 100%;
+    /* element to 100% of its containing parent, making it span the entire width available*/
+    margin: 0 auto;
+    /*centers the deader element horizontally within the containing paernt and the 
     auto value distributes the margin space evently*/
-    padding: 20px; /*Applies 20px all would the header element*/
-    padding-bottom: 15px;/*Adds an addtional 15px at the bottom of the header*/
-    background: var(--foreground);/*uses the color in the root*/
-    color: var(--content);/*uses the color in the root*/
-    word-wrap: wrap; /*enables log words to be broken and wrapped on to the next line to prevent 
+    padding: 20px;
+    /*Applies 20px all would the header element*/
+    padding-bottom: 15px;
+    /*Adds an addtional 15px at the bottom of the header*/
+    background: var(--foreground);
+    /*uses the color in the root*/
+    color: var(--content);
+    /*uses the color in the root*/
+    word-wrap: wrap;
+    /*enables log words to be broken and wrapped on to the next line to prevent 
     them from overflowing*/
-    overflow: hidden; /*Prevents any content from overflowing outside the boundaries of the header.*/
+    overflow: hidden;
+    /*Prevents any content from overflowing outside the boundaries of the header.*/
 }
 
 nav ul li a {
-    display: inline-block;/*makes the elements behave like inline-block allowing them to have 
+    display: inline-block;
+    /*makes the elements behave like inline-block allowing them to have 
     block level properties while still flowing with the text content as inline elements*/
-    overflow-wrap: break-word; /*This property allows long wors to breakup and wrap onto the next line*/
-    margin-left: 30px; /*adds 30px to the margin on the anchor elemets to the right 
+    overflow-wrap: break-word;
+    /*This property allows long wors to breakup and wrap onto the next line*/
+    margin-left: 30px;
+    /*adds 30px to the margin on the anchor elemets to the right 
     withing the header */
-    float: right; /*makes the nav ul li float to the right of the page*/
-    font-size: 20px; /*sets the font size on the anchor elements to 20px*/
-    color: var(--content); /*sets the font color of the anchoe elements usting the custom variable*/
-    list-style: none; /*removed he default bullet point or numbering style*/
+    float: right;
+    /*makes the nav ul li float to the right of the page*/
+    font-size: 20px;
+    /*sets the font size on the anchor elements to 20px*/
+    color: var(--content);
+    /*sets the font color of the anchoe elements usting the custom variable*/
+    list-style: none;
+    /*removed he default bullet point or numbering style*/
     text-decoration: none;
 }
 
-.li-glow:hover { /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
+.li-glow:hover {
+    /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
     box-shadow: inset 0px 0px 8px var(--content), 0 0 15px var(--content);
 }
 
-img { /*sets the image on the ablout me section to the left*/
-    width: 100px; /*sets width to 90px*/
-    height: auto; /*Maintains aspect ratio of the images while ensuring that the 
+img {
+    /*sets the image on the ablout me section to the left*/
+    width: 100px;
+    /*sets width to 90px*/
+    height: auto;
+    /*Maintains aspect ratio of the images while ensuring that the 
     height adjysts on each corner*/
-    border-radius: 5px; /*Aplies a rounded corner effect to the images and aboder with of 5px on each corner*/
+    border-radius: 5px;
+    /*Aplies a rounded corner effect to the images and aboder with of 5px on each corner*/
 }
 
 
-.line { /*sets the spacing betweent the sections*/
-    border-bottom: 13px solid var(--background-color);/*sets border element to 13px thick and solid, color is 
+.line {
+    /*sets the spacing betweent the sections*/
+    border-bottom: 13px solid var(--background-color);
+    /*sets border element to 13px thick and solid, color is 
     defined by the custom variable*/
-    width: 100% /*sets the width to 100% of the element's container*/
+    width: 100%
+        /*sets the width to 100% of the element's container*/
 }
 
-.left-aligned-image{
-display: flex; /* Use flexbox for layout */
-align-items: conter; /* Align items vertically */
-width: 100%; /* Set maximum width for the image */
-height: auto; /* Maintain aspect ratio */
-padding: 20px; /* Add space between image and text */
+.left-aligned-image {
+    display: flex;
+    /* Use flexbox for layout */
+    align-items: conter;
+    /* Align items vertically */
+    width: 100%;
+    /* Set maximum width for the image */
+    height: auto;
+    /* Maintain aspect ratio */
+    padding: 20px;
+    /* Add space between image and text */
 }
 
 
 .about-me-section,
-.contact-me { /*Creates the background clolors for the about me and the contact me sections*/
-    display: flex; /* Makes the elemensts flex containers*/
-    flex-direction: column; /*Sets the fex containder to display its child elements in a 
-    column Lay out*/
-    margin: auto;/*sets the flex containers horizontally within their container*/
-    padding: 25px; /*Adds 10px on the padding to all sides*/
-    padding-bottom: 5px;/*Adds 5px on the padding at the bottom*/
-    background: var(--foreground); /*sets the backgroung using the variable*/
-    color: var(--content); /*sets the color text using the variable*/
-    width: 100%; /*Sets the width of the elements  to span the entire width to 
-    their containing parent*/
-    max-width: 100%; /*sets thw width of the elements to span the entire width 
-    of their containing parent and doesn't exceed the width*/
-    box-sizing: border-box;/*Ensures that padding and borders are included in the 
-    specified width and height of these elements, preventing them from affecting the overall size*/
-    height: auto;/*Allow the elements to grow in height automatically based on content*/
-}
-
-.work-section {/*Creates the background clolors work the work section*/
-    flex: 1;
-    display: flex; /* Makes the elemensts flex containers*/
-    flex-direction: column;/*Arranges the items on a column layout*/
-    align-items: center; /*aligns items at the center of the container*/
-    margin: auto;/*Centers the flex container and creates equal margins*/
-    padding: 10px; /*padding is 10px all around*/
-    padding-bottom: 5px;/*Adds 5px addtional pixels at the bottom*/
-    background: var(--foreground);/*Sets the background color using variable*/
-    color: var(--content); /*sets the text color using a variable*/
-    width:100%;
-    max-width: 100%;/*Sets the width to span the entirely element and does 
-    not exceed the containger*/
-    box-sizing: border-box;/*ensures that pasidng and borders are included 
-    in the width and height of the element precenting them from affecting the overall height*/
-    height: auto; /*Allows the element to grow in height automatically*/
-}
-
-
-.work-section2 {/*Creates the background clolors work the work section*/
-    flex: 1;
-    display: flex; /* Makes the elemensts flex containers*/
-    align-items: center; /*aligns items at the center of the container*/
-    margin: auto;/*Centers the flex container and creates equal margins*/
-    padding: 10px; /*padding is 10px all around*/
-    padding-bottom: 5px;/*Adds 5px addtional pixels at the bottom*/
-    background: var(--foreground);/*Sets the background color using variable*/
-    color: var(--content); /*sets the text color using a variable*/
-    width:100%;
-    max-width: 100%;/*Sets the width to span the entirely element and does 
-    not exceed the containger*/
-    box-sizing: border-box;/*ensures that pasidng and borders are included 
-    in the width and height of the element precenting them from affecting the overall height*/
-    height: auto; /*Allows the element to grow in height automatically*/
-    display: inline-block;
-    flex-direction: column;/*Arranges the items on a column layout*/
-    flex-wrap: wrap;
-    display: center; /*aligns items at the center of the container*/
-    align-items: center;
-    overflow:hidden;
-    padding: 20px;
-}
-
-.container {
+.contact-me {
+    /*Creates the background clolors for the about me and the contact me sections*/
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* Makes the elemensts flex containers*/
+    flex-direction: column;
+    /*Sets the fex containder to display its child elements in a 
+    column Lay out*/
+    margin: auto;
+    /*sets the flex containers horizontally within their container*/
+    padding: 25px;
+    /*Adds 10px on the padding to all sides*/
+    padding-bottom: 5px;
+    /*Adds 5px on the padding at the bottom*/
+    background: var(--foreground);
+    /*sets the backgroung using the variable*/
+    color: var(--content);
+    /*sets the color text using the variable*/
+    width: 100%;
+    /*Sets the width of the elements  to span the entire width to 
+    their containing parent*/
     max-width: 100%;
-    height: 100vh; /* Adjust this according to your layout */
+    /*sets thw width of the elements to span the entire width 
+    of their containing parent and doesn't exceed the width*/
+    box-sizing: border-box;
+    /*Ensures that padding and borders are included in the 
+    specified width and height of these elements, preventing them from affecting the overall size*/
+    height: auto;
+    /*Allow the elements to grow in height automatically based on content*/
 }
 
-.card-column { /*places the column spacing betwwedn the articles within the sections*/
-    flex: 1 0 100%;/*shorthand for the flex-grow, shirnk and flex basis set to grow one space, 
+.work-section {
+    /*Creates the background clolors work the work section*/
+
+    display: flex;
+    /* Makes the elemensts flex containers*/
+    flex-direction: column;
+    /*Arranges the items on a column layout*/
+    align-items: center;
+    /*aligns items at the center of the container*/
+    margin: auto;
+    /*Centers the flex container and creates equal margins*/
+    padding: 10px;
+    /*padding is 10px all around*/
+    padding-bottom: 5px;
+    /*Adds 5px addtional pixels at the bottom*/
+    background: var(--foreground);
+    /*Sets the background color using variable*/
+    color: var(--content);
+    /*sets the text color using a variable*/
+    width: 100%;
+    max-width: 100%;
+    /*Sets the width to span the entirely element and does 
+    not exceed the containger*/
+    box-sizing: border-box;
+    /*ensures that pasidng and borders are included 
+    in the width and height of the element precenting them from affecting the overall height*/
+    height: auto;
+    /*Allows the element to grow in height automatically*/
+}
+
+.card-column {
+    /*places the column spacing betwwedn the articles within the sections*/
+    flex: 1 0 100%;
+    /*shorthand for the flex-grow, shirnk and flex basis set to grow one space, 
     the element should not shrink, and sets the initial size to occupy 100% of the available spacealong the main axis*/
-    padding: 15px;/* when the screen resizes, make it so our columns don't jump in size */
-    transition: flex-basis 500ms linear;/*sets a sransittion effect of the change in the flex 
+    padding: 15px;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    /*sets a sransittion effect of the change in the flex 
     over durantion 500 miliseconds for a smooth transition*/
-    margin-bottom: 15px; /*adds a bottom margin of 15px*/
+    margin-bottom: 15px;
+    /*adds a bottom margin of 15px*/
 }
 
-.code-card { /*CREARES THE DASHES OUTLINE ont he cards*/
-    display: flex; /*Turns elements into flex containers*/
-    flex-direction: column;/*Arranges flex items in a column within the container*/
-    justify-content: flex-start; /*Aligns flex items on the main axis as pushes them to the top*/
-    min-height: 100%;/*Sets the minimum height to full height*/
-    padding: 20px; /*adds paddding to all sides*/
-    color: var(--content); /*sets the text based on the variable*/
-    outline: 5px dashed var(--content);/* outline is like border, but on the outside of the box instead of inside */
-    outline-offset: -5px; /*shift the outline contect by 5px making the outline stay within the elements*/
-    transition: all 0.5s ease-in-out; /*Specifies a transition effect for all properties over a dutation of .5s*/
+.code-card {
+    /*CREARES THE DASHES OUTLINE ont he cards*/
+    display: flex;
+    /*Turns elements into flex containers*/
+    flex-direction: column;
+    /*Arranges flex items in a column within the container*/
+    justify-content: flex-start;
+    /*Aligns flex items on the main axis as pushes them to the top*/
+    min-height: 100%;
+    /*Sets the minimum height to full height*/
+    padding: 20px;
+    /*adds paddding to all sides*/
+    color: var(--content);
+    /*sets the text based on the variable*/
+    outline: 5px dashed var(--content);
+    /* outline is like border, but on the outside of the box instead of inside */
+    outline-offset: -5px;
+    /*shift the outline contect by 5px making the outline stay within the elements*/
+    transition: all 0.5s ease-in-out;
+    /*Specifies a transition effect for all properties over a dutation of .5s*/
 }
 
-.code-card .card-header {/*CHANGES COMUNG THE TIELE AREAS: COMING SOON and COMPLETED WORK*/
+.code-card .card-header {
+    /*CHANGES COMUNG THE TIELE AREAS: COMING SOON and COMPLETED WORK*/
     /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
-    position: relative; /*makes postion elemets relative to its noremal postions*/
-    margin: -4rem 0 1.5rem 0; /*set negative marding to mve the element upward and downward to ovelap the ourline */
-    padding: 0.5rem 1rem; /*adds padding on the tip and bottor and sides*/
-    background-color: var(--box-font); /*sets the background color using variant*/
-    color: var(--content); /*sets the font color using varaint*/
-    border: 2px solid var(--content);/*sets the border to be solid and 2 pixesls*/
-    border-radius: 8px; /*makes the border with rounded corners and 8px*/
-    transition: all 0.5s ease-in-out; /**/
+    position: relative;
+    /*makes postion elemets relative to its noremal postions*/
+    margin: -4rem 0 1.5rem 0;
+    /*set negative marding to mve the element upward and downward to ovelap the ourline */
+    padding: 0.5rem 1rem;
+    /*adds padding on the tip and bottor and sides*/
+    background-color: var(--box-font);
+    /*sets the background color using variant*/
+    color: var(--content);
+    /*sets the font color using varaint*/
+    border: 2px solid var(--content);
+    /*sets the border to be solid and 2 pixesls*/
+    border-radius: 8px;
+    /*makes the border with rounded corners and 8px*/
+    transition: all 0.5s ease-in-out;
+    /**/
 }
 
 /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
@@ -208,67 +268,96 @@ padding: 20px; /* Add space between image and text */
     padding: 10px 8px;
     border-radius: 8px;
     /* use linear-gradient() function to create a fading background  */
-    background-image: linear-gradient(
-    rgba(147, 158, 156, 0.542) 0%,
-    rgba(178, 113, 1, 0.379) 100%);
+    background-image: linear-gradient(rgba(147, 158, 156, 0.542) 0%,
+            rgba(178, 113, 1, 0.379) 100%);
     display: flex;
 }
 
 .full-width-image {
-    width: 100%; /*makes the car items and image fit the with of the page and aligne the content 
-    center*/ 
-    justify-content: center;/*porperly aligns flex items and centers the items horizontally*/
-    align-items: center; /*porperly aligns flex items along vertical axis and centers items*/
+    width: 100%;
+    /*makes the car items and image fit the with of the page and aligne the content 
+    center*/
+    justify-content: center;
+    /*porperly aligns flex items and centers the items horizontally*/
+    align-items: center;
+    /*porperly aligns flex items along vertical axis and centers items*/
 }
 
 
 /*centers the card items below the larger image and 
 displays in-line block and the border box maintains a consitent layout*/
 .work-item {
-    flex-wrap: wrap;
-width: 30%;/* sets the with of the element to 30%*/
-display: inline-block; /*Allows them net to each other horizonally*/
-box-sizing: border-box;/*adjusts box model to included pading and border*/
-margin-right: 10px;/*creates space between each card item*/
-vertical-align: top;/*aligns the top to to ensure consitent alignment*/
- }
+    flex; 1 0 30%;
+    /* sets the with of the element to 30%*/
+    box-sizing: border-box;
+    /*adjusts box model to included pading and border*/
+    margin-right: 10px;
+    /*creates space between each card item*/
+    vertical-align: top;
+    /*aligns the top to to ensure consitent alignment*/
+}
 
+section {
+    display: flex;
+    flex: wrap;
+}
 
-/*makes the car items and image fit the with of the page*/ 
+/*makes the car items and image fit the with of the page*/
 .full-width-image2 {
-    display: flex; /*turns the elements to flex container*/
-    width: 100%;/*sets width to occopy the 100% of the parent container*/ 
-    height: 300px; /*sets a specific height*/ 
+    display: flex;
+    /*turns the elements to flex container*/
+    width: 100%;
+    /*sets width to occopy the 100% of the parent container*/
+    height: 300px;
+    /*sets a specific height*/
 }
 
 .ul-contact {
-    list-style-type: none; /*removes the bullet ellements */
-    padding: 0; /*sets the padding elements to 0*/
-    display: flex;/*changes the elements to flex containers*/
+    list-style-type: none;
+    /*removes the bullet ellements */
+    padding: 0;
+    /*sets the padding elements to 0*/
+    display: flex;
+    /*changes the elements to flex containers*/
 }
 
 .ul-contact li {
-    margin-right: 20px; /* Adjust the spacing between list items */
+    margin-right: 20px;
+    /* Adjust the spacing between list items */
 }
 
 .ul-contact li a {
-    text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Inherit the color from the parent */
+    text-decoration: none;
+    /* Remove underline from links */
+    color: inherit;
+    /* Inherit the color from the parent */
 }
 
 /*uses media query to targe screens with a maximum of 768 pixels to follow the rules lised*/
 @media screen and (max-width:768px) {
     .container {
-        flex-direction: column;/*changes the direction of elements to column layout to stack 
+        flex-direction: column;
+        /*changes the direction of elements to column layout to stack 
         in the flex items veritcally when the width is 768 pixels or less*/
     }
+
+    .work-item{
+flex-basis: 100%;
+margin-right: 0;
+margin-bottom: 15px;
+    }
+
     .image {
-        max-width: 100%;/*sets the maximum width of elements not to exeed 768 pixels*/
+        max-width: 100%;
+        /*sets the maximum width of elements not to exeed 768 pixels*/
     }
 }
 
 footer {
-    margin: 10px;/*adds a margin of 10 ppixels around the footer*/
-    padding: 10px; /*adds a padding of 10 ppixels around the footer*/
-    text-align: center; /*aligns the text content inside the footer to the center*/
+    margin: 10px;
+    /*adds a margin of 10 ppixels around the footer*/
+    padding: 10px;
+    /*adds a padding of 10 ppixels around the footer*/
+    text-align: center;
+    /*aligns the text content inside the footer to the center*/
 }
