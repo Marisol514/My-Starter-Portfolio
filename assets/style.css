@@ -65,16 +65,25 @@ nav ul li a {
 }
 
 img { /*sets the image on the ablout me section to the left*/
-    width: 90px; /*sets width to 90px*/
+    width: 100px; /*sets width to 90px*/
     height: auto; /*Maintains aspect ratio of the images while ensuring that the 
     height adjysts on each corner*/
     border-radius: 5px; /*Aplies a rounded corner effect to the images and aboder with of 5px on each corner*/
 }
 
+
 .line { /*sets the spacing betweent the sections*/
     border-bottom: 13px solid var(--background-color);/*sets border element to 13px thick and solid, color is 
     defined by the custom variable*/
     width: 100% /*sets the width to 100% of the element's container*/
+}
+
+.left-aligned-image{
+display: flex; /* Use flexbox for layout */
+align-items: conter; /* Align items vertically */
+width: 100%; /* Set maximum width for the image */
+height: auto; /* Maintain aspect ratio */
+padding: 20px; /* Add space between image and text */
 }
 
 
