@@ -21,6 +21,7 @@ html {
 }
 
 body {
+    display: flex;
     flex-direction: column;/*Sets the bodyt o flex container*/
     min-height: 100vh; /*set height to 100% of the viewpoint, and the vh ensures that the 
     body at least spans the entire height*/
@@ -33,6 +34,7 @@ body {
 }
 
 header {
+    display: flexbox;
     width: 100%; /* element to 100% of its containing parent, making it span the entire width available*/
     margin: 0 auto;/*centers the deader element horizontally within the containing paernt and the 
     auto value distributes the margin space evently*/
@@ -104,6 +106,7 @@ img { /*sets the image on the ablout me section to the left*/
     padding-bottom: 5px;/*Adds 5px addtional pixels at the bottom*/
     background: var(--foreground);/*Sets the background color using variable*/
     color: var(--content); /*sets the text color using a variable*/
+    width:100%;
     max-width: 100%;/*Sets the width to span the entirely element and does 
     not exceed the containger*/
     box-sizing: border-box;/*ensures that pasidng and borders are included 
@@ -112,6 +115,7 @@ img { /*sets the image on the ablout me section to the left*/
 }
 
 .work-section2 {/*Creates the background clolors work the work section*/
+    display: flex;
     display: center; /*aligns items at the center of the container*/
     justify-content: center;
     align-items: center;
@@ -121,6 +125,7 @@ img { /*sets the image on the ablout me section to the left*/
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
     height: 100vh; /* Adjust this according to your layout */
 }
 
