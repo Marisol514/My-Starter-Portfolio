@@ -106,7 +106,6 @@ img { /*sets the image on the ablout me section to the left*/
     height: auto; /*Allows the element to grow in height automatically*/
 }
 
-
 .card-column { /*places the column spacing betwwedn the articles within the sections*/
     flex: 1 0 100%;/*shorthand for the flex-grow, shirnk and flex basis set to grow one space, 
     the element should not shrink, and sets the initial size to occupy 100% of the available spacealong the main axis*/
@@ -141,7 +140,8 @@ img { /*sets the image on the ablout me section to the left*/
 }
 
 .code-card:hover,
-.code-card:hover .card-header {
+.code-card:hover .card-header,
+.li-glow:hover {
     box-shadow: inset 0px 0px 8px var(--content), 0 0 15px var(--content);/* set an outer and inner drop 
     shadow on the card to create a glowing effect on hover */
 }
@@ -159,8 +159,8 @@ img { /*sets the image on the ablout me section to the left*/
     border-radius: 8px;
     /* use linear-gradient() function to create a fading background  */
     background-image: linear-gradient(
-    rgba(147, 158, 156, 0.542) 0%,
-    rgba(178, 113, 1, 0.379) 100%);
+    rgba(143, 210, 147, 0.635) 0%,
+    rgba(165, 109, 12, 0.48) 100%);
     display: flex;
 }
 
@@ -171,13 +171,31 @@ img { /*sets the image on the ablout me section to the left*/
     align-items: center;
 }
 
+.auto-resize-image{ 
+    width: 100%;
+    justify-items:center
+    ;
+    max-width:100%;
+}
+
+.ul-contact  {
+    display: inline-flex;/*makes the elements behave like inline-block allowing them to have 
+    block level properties while still flowing with the text content as inline elements*/
+    overflow-wrap: break-word; /*This property allows long wors to breakup and wrap onto the next line*/
+    font-size: 20px; /*sets the font size on the anchor elements to 20px*/
+    color: var(--content); /*sets the font color of the anchoe elements usting the custom variable*/
+    list-style: none; /*removed he default bullet point or numbering style*/ 
+    width: 100%;
+}
+
 /*centers the card items below the larger image and in the "my work" area
 displays in-line block and the border box maintains a consitent layout*/
+
+
 .work-item {
-display: inline-block;
-height: 200px;
-height: 300%;
-box-sizing: border-box;
+    display: inline-block;
+    flex: 0 0 calc(30% - 10px);
+    max-width: calc(30% - 10px);
  }
 
 @media screen and (max-width:768px) {
