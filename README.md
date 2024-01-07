@@ -32,7 +32,7 @@ THEN I am taken to that deployed application
 WHEN I resize the page or view the site on various screens and devices
 THEN I am presented with a responsive layout that adapts to my viewport
 
-## Scrren Shots
+## Scren Shots
 ![Alt text](image.png)
 ![Alt text](image-1.png)
 ![Alt text](image-2.png)
@@ -40,6 +40,7 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 ## Review Links
 Deplyes Application Link: https://marisol514.github.io/My-Starter-Portfolio/
+
 URL GitHub Repository: https://github.com/Marisol514/My-Starter-Portfolio
 
 ## Acknowledgments:
@@ -48,7 +49,7 @@ Worked with Danniel Merino mostly to bouce ideas.
 
 ## Resources: 
 
-Accesibility - Contrast Checquer: https://accessibleweb.com/color-contrast-checker/
+Accesibility - Contrast Checker: https://accessibleweb.com/color-contrast-checker/
 emoji source: https://emojipedia.org/
 
 Mini-Project references: https://git.bootcampcontent.com/University-of-California---Irvine/UCI-VIRT-FSF-PT-12-2023-U-LOLC/-/tree/main/02-Advanced-CSS/01-Activities/28-Stu_Mini-Project?ref_type=heads
