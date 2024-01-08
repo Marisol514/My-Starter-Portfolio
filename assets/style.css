@@ -287,19 +287,30 @@ img {
 /*centers the card items below the larger image and 
 displays in-line block and the border box maintains a consitent layout*/
 .work-item {
-    flex; 1 0 30%;
+    flex;
+    1 0 30%;
     /* sets the with of the element to 30%*/
+    flex-direction: row;
     box-sizing: border-box;
     /*adjusts box model to included pading and border*/
     margin-right: 10px;
     /*creates space between each card item*/
     vertical-align: top;
     /*aligns the top to to ensure consitent alignment*/
+    justify-content
 }
 
 section {
     display: flex;
     flex: wrap;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
 }
 
 /*makes the car items and image fit the with of the page*/
@@ -338,13 +349,13 @@ section {
     .container {
         flex-direction: column;
         /*changes the direction of elements to column layout to stack 
-        in the flex items veritcally when the width is 768 pixels or less*/
+   in the flex items veritcally when the width is 768 pixels or less*/
     }
 
-    .work-item{
-flex-basis: 100%;
-margin-right: 0;
-margin-bottom: 15px;
+    .work-item {
+        flex-basis: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
     }
 
     .image {
